@@ -27,11 +27,13 @@ section{
         </div>
 
         <div class="col-md-6">
+          
           <div ng-hide="grumble.editing">
             <h2><a ng-href="grumbles/{{grumble.id}}">{{grumble.title}}</a></h2>
             <p>by: {{grumble.authorName}} <button type="button" class="btn btn-xs btn-default" ng-click="grumble.toggleEditing()">Udpate</button></p>
             <p>{{grumble.content}}</p>
           </div>
+
           <div ng-show="grumble.editing">
             <div class="form-group">
               <div class="input-group">

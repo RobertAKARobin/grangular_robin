@@ -62,6 +62,10 @@
           self.comments = response.data;
         });
     }
+
+    function update(){
+
+    }
   }
 })();
 
