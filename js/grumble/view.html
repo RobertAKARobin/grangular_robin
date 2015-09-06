@@ -1,0 +1,38 @@
+<section class="grumble well row clearfix">
+  <div class="col-md-6">
+    <img class="img-responsive img-rounded" ng-src="{{grumble.photoUrl}}" alt="{{grumble.title}}" />
+  </div>
+
+  <div class="col-md-6">
+    <div ng-hide="grumble.editing">
+      <h2><a ng-href="grumbles/{{grumble.id}}">{{grumble.title}}</a></h2>
+      <p>by: {{grumble.authorName}} <button type="button" class="btn btn-xs btn-default" ng-click="grumble.toggleEditing()">Udpate</button></p>
+      <p>{{grumble.content}}</p>
+    </div>
+    <div ng-show="grumble.editing">
+      <div class="form-group">
+        <div class="input-group">
+          <label for="title{{grumble.id}}" class="input-group-addon">Title</label>
+          <input id="title{{grumble.id}}" class="form-control" ng-model="grumble.title" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <label for="authorName{{grumble.id}}" class="input-group-addon">Author</label>
+          <input id="authorName{{grumble.id}}" class="form-control" ng-model="grumble.authorName" />
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" ng-model="grumble.content"></textarea>
+      </div>
+      <div class="form-group">
+        <input id="imageUrl{{grumble.id}}" class="form-control" placeholder="Image URL" ng-model="grumble.photoUrl" />
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" ng-click="grumble.update()">Save</button>
+        <button type="button" class="btn" ng-click="grumble.toggleEditing()">Back</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
