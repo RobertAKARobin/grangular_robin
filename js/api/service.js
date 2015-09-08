@@ -11,9 +11,6 @@
       },
       post: function(endpoint){
         return $http.post(baseURL + endpoint);
-      },
-      put: function(endpoint){
-
       }
     }
   }

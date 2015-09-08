@@ -1,0 +1,22 @@
+<div>
+  <div class="form-group">
+    <input id="title{{grumble.id}}" class="form-control" data-ng-model="grumble.title" placeholder="Title" />
+  </div>
+  <div class="form-group">
+    <input id="authorName{{grumble.id}}" class="form-control" data-ng-model="grumble.authorName" placeholder="Author" />
+  </div>
+  <div class="form-group">
+    <textarea id="content{{grumble.id}}" class="form-control" data-ng-model="grumble.content" placeholder="Content"></textarea>
+  </div>
+  <div class="form-group">
+    <input id="imageUrl{{grumble.id}}" class="form-control"  data-ng-model="grumble.photoUrl" placeholder="Image URL" />
+  </div>
+  <div class="form-group" ng-if="grumble.id">
+    <button type="button" class="btn btn-primary" data-ng-click="">Save</button>
+    <button type="button" class="btn" data-ng-click="$parent.grumble.toggleEditing()">Back</button>
+    <button type="button" class="btn btn-danger">Delete</button>
+  </div>
+  <div class="form-group" ng-if="!grumble.id">
+    <h1>foo</h1>
+  </div>
+</div>

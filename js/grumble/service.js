@@ -1,9 +1,9 @@
 (function(){
   angular
     .module("Grumblr")
-    .factory("GrumbleFactory", ["API", Grumble]);
+    .factory("GrumbleFactory", ["API", GrumbleFactory]);
 
-  function Grumble($api){
+  function GrumbleFactory($api){
     return function(input){
       var self = this;
       self.comments = [];
